@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <%= render "shared/nav"%>
+    <% if notice %>
+      <p class="px-4 py-3 text-teal-900 bg-teal-100 border-t-4 border-teal-500 rounded-b shadow-md notice"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+       <p class="px-4 py-3 text-red-400 bg-red-100 border-t-4 border-red-500 rounded-b shadow-md alert"><%= alert %></p>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

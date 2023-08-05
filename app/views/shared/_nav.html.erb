@@ -1,0 +1,23 @@
+<nav class="flex p-4 mb-2 space-x-4 bg-blue-700 justify-normal">
+   <li class="text-base text-white list-none">
+      <%= link_to "Inicio", root_path %>
+   </li>
+   <li class="text-base text-white list-none">
+      <%= link_to "Articulos", articles_path %>
+   </li>
+   <li class="text-base text-white list-none">
+      <%= link_to "Escribir", new_articles_path %>
+   </li>
+   <% if user_signed_in? %>
+      <li class="text-base text-white list-none">
+         <%= button_to "Cerrar Sesión", destroy_user_session_path, method: :delete %>
+      </li>
+   <% else %>
+      <li class="text-base text-white list-none">
+         <%= link_to "Iniciar Sesión", new_user_session_path %>
+      </li>
+      <li class="text-base text-white list-none">
+         <%= link_to "Registrarse", new_user_registration_path %>
+      </li>
+   <% end %>
+</nav>
