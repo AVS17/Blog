@@ -12,6 +12,10 @@
       </li>
       
       <li class="text-base text-white list-none">
+         <%= link_to "Mi perfil", profile_path %>
+      </li>
+      
+      <li class="text-base text-white list-none">
          <%= button_to "Cerrar Sesión", destroy_user_session_path, method: :delete %>
       </li>
    <% else %>

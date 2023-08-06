@@ -5,6 +5,18 @@
     </div>
 
     <div class="block mb-2">
+        <%= form.label :category_elements, class: 'block text-gray-700 text-sm font-bold mb-2'%>
+        <div class="grid grid-cols-3 gap-6">
+            <% @categories.each do |category|%>
+                <label for="" class="text-base font-bold">
+                    <%= form.check_box :category_elements, {multiple: true}, category.id, nil%>
+                    <%= category.title %>
+                </label>
+            <% end %>
+        </div>
+    </div>
+
+    <div class="block mb-2">
         <%= form.label :content , class: 'block text-gray-700 text-sm font-bold mb-2'%>
         <%= form.rich_text_area :content %>
     </div>

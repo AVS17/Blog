@@ -1,11 +1,4 @@
-<div class="flex w-full mx-auto md:w-2/3">
-  <div class="mx-auto">
-    <%= render @category %>
-
-    <%= link_to 'Edit this category', edit_category_path(@category), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <div class="inline-block ml-2">
-      <%= button_to 'Destroy this category', category_path(@category), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
-    </div>
-    <%= link_to 'Back to categories', categories_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-  </div>
+<div class="flex flex-col items-center justify-center w-2/3 mx-auto">
+   <h1 class="block text-xl font-bold text-center">Artículos publicados en <%=@category.title%></h1>
+   <%= render   @category.articles %>
 </div>
