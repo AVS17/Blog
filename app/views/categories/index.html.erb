@@ -1,0 +1,10 @@
+<div class="w-full">
+  <div class="flex items-center justify-between">
+    <h1 class="text-4xl font-bold">Categories</h1>
+    <%= link_to 'New category', new_category_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+  </div>
+
+  <div id="categories" class="flex flex-col items-center justify-center w-auto"> 
+    <%= render @categories %>
+  </div>
+</div>

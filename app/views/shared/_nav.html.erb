@@ -5,10 +5,12 @@
    <li class="text-base text-white list-none">
       <%= link_to "Articulos", articles_path %>
    </li>
-   <li class="text-base text-white list-none">
-      <%= link_to "Escribir", new_articles_path %>
-   </li>
+   
    <% if user_signed_in? %>
+      <li class="text-base text-white list-none">
+         <%= link_to "Escribir", new_article_path %>
+      </li>
+      
       <li class="text-base text-white list-none">
          <%= button_to "Cerrar Sesión", destroy_user_session_path, method: :delete %>
       </li>

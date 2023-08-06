@@ -1,0 +1,17 @@
+<div id="<%= dom_id category %>" class="w-1/2 bg-white border-b-2">
+  <p class="my-5">
+    <strong class="block mb-1 font-medium">Title:</strong>
+    <%= category.title %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block mb-1 font-medium">Color:</strong>
+    <%= category.color %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this category", category, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this category', edit_category_path(category), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
